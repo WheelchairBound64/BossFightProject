@@ -54,6 +54,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1557464927317808920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6848233740116367126}
+  m_Layer: 0
+  m_Name: RocketSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6848233740116367126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557464927317808920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.004, y: -0.488, z: 1.117}
+  m_LocalScale: {x: 0.7999998, y: 0.8, z: 0.7999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1006638580743620499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984826301768585426
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +312,7 @@ MonoBehaviour:
   damageAmount: 1
   knockbackForce: 25
   hitEffectPrefab: {fileID: 2717892095994439559, guid: 7f6dafc4f0f90564395b340bbe141b85, type: 3}
-  hitSounds: {fileID: 11400000, guid: 63732e03242e01946b95049a50555f86, type: 2}
+  hitSounds: {fileID: 11400000, guid: a9d4cae692d25fb44bd4440e3e6c1dde, type: 2}
   OnContact:
     m_PersistentCalls:
       m_Calls: []
@@ -321,7 +352,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9074bd87b3232e4b86be8f6b6d98a32, type: 2}
+  - {fileID: 2100000, guid: 06af61b4770ce2e4c8d92c230225d4cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -429,7 +460,7 @@ GameObject:
   - component: {fileID: 7612300705398697544}
   - component: {fileID: 6434142452146533465}
   - component: {fileID: 3819709631938654634}
-  - component: {fileID: 2360457001563679199}
+  - component: {fileID: 8060879779243405499}
   - component: {fileID: 6503739918161579068}
   m_Layer: 7
   m_Name: RobotSoldier
@@ -454,6 +485,7 @@ Transform:
   - {fileID: 1388439648388441112}
   - {fileID: 6493781077973191630}
   - {fileID: 7375142809413813261}
+  - {fileID: 6848233740116367126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180.031, z: 0}
 --- !u!33 &8197111693064060192
@@ -619,7 +651,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2360457001563679199}
+      - m_Target: {fileID: 8060879779243405499}
         m_TargetAssemblyTypeName: brolive.EnemyTest, Assembly-CSharp
         m_MethodName: Death
         m_Mode: 1
@@ -646,7 +678,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2360457001563679199
+--- !u!114 &8060879779243405499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -655,11 +687,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5247524955676848016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1daad54e5177c964291ab03eeb9e6ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b18b05c08ef2624ea36ce29bf46d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
   meleeWeapon: {fileID: 1266338281728766441}
+  shovelSwingSound: {fileID: 8300000, guid: 50f4b18b5dfab0a4ea53c838cd6fc1f7, type: 3}
+  rocket: {fileID: 7913818765908776920, guid: a28d0f81368804b4196651577e2f0567, type: 3}
+  rocketSpawn: {fileID: 6848233740116367126}
 --- !u!54 &6503739918161579068
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -756,7 +791,7 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2360457001563679199}
+      - m_Target: {fileID: 8060879779243405499}
         m_TargetAssemblyTypeName: EnemyTest, Assembly-CSharp
         m_MethodName: SetInMeleeRange
         m_Mode: 6
@@ -771,7 +806,7 @@ MonoBehaviour:
   OnExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2360457001563679199}
+      - m_Target: {fileID: 8060879779243405499}
         m_TargetAssemblyTypeName: EnemyTest, Assembly-CSharp
         m_MethodName: SetInMeleeRange
         m_Mode: 6

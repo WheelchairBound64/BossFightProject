@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e47bd44c6ea0d48b96988b8859db78, type: 3}
+  m_Name: RS_HurtSounds
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 1713adf88ec0875428181e26a4f18c42, type: 3}
+  - {fileID: 8300000, guid: 071a679905065ca42addd1e3b92c7bb9, type: 3}
+  - {fileID: 8300000, guid: f02daa239a27a914cb7a0f5e9013441a, type: 3}
+  - {fileID: 8300000, guid: 08a00969fb1c5354c9cfc067f46a2843, type: 3}
+  - {fileID: 8300000, guid: 38f795f05bd1a984eb4828ffe0871a86, type: 3}
+  - {fileID: 8300000, guid: 0ab266301761cae46bb1b6857ed627fd, type: 3}
+  - {fileID: 8300000, guid: 0ff670766579adc4294c8a401826b91d, type: 3}
+  - {fileID: 8300000, guid: 3487ad5f74549a94bb3cf7653cb03866, type: 3}
