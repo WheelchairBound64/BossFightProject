@@ -19,6 +19,7 @@ namespace ccomstock
         [SerializeField] Transform rocketSpawn;
         [SerializeField] AudioClip spawnVoiceline;
         [SerializeField] AudioClipCollection voiceLines;
+        public float rangedAttackDistance;
 
         Navigator navigator;
         Transform _transform;
@@ -94,7 +95,7 @@ namespace ccomstock
 
             if (AttemptMakePathToPlayer())
             {
-                if (distance >= 10f)
+                if (distance >= rangedAttackDistance)
                 {
                     StartCoroutine(RangedAttack());
                 }
@@ -185,8 +186,8 @@ namespace ccomstock
 
         IEnumerator RangedAttack()
         {
-            yield return new WaitForSeconds(3f);
-            while (distance > 10)
+            yield return new WaitForSeconds(2f);
+            while (distance > rangedAttackDistance)
             {
                 var dirToPlayer = (player.transform.position - transform.position).normalized;
                 dirToPlayer.y = 0;
@@ -201,7 +202,7 @@ namespace ccomstock
 
         void UpdateRanged()
         {
-            if (distance < 10)
+            if (distance < rangedAttackDistance)
             {
                 if(currentStateElapsed >= 1f)
                 {

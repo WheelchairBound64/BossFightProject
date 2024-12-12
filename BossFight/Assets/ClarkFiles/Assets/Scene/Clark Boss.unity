@@ -155,7 +155,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1457,13 +1457,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3819709631938654634, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: hurtSounds
-      value: 
-      objectReference: {fileID: 11400000, guid: 57b334dc1098e8646a03787c5409d9df, type: 2}
-    - target: {fileID: 3819709631938654634, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: deathSounds
-      value: 
-      objectReference: {fileID: 11400000, guid: 3c8e00ea707ddf04d8815e3aec0d7bb5, type: 2}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3819709631938654634, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
       propertyPath: OnInitialize.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1492,22 +1488,6 @@ PrefabInstance:
       propertyPath: OnSuccessfulHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1378800224}
-    - target: {fileID: 8060879779243405499, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8060879779243405499, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: voiceLines
-      value: 
-      objectReference: {fileID: 11400000, guid: 2ba25e9b4b37e9c409f8c05bec0f9025, type: 2}
-    - target: {fileID: 8060879779243405499, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: rocketSpawn
-      value: 
-      objectReference: {fileID: 1655035315}
-    - target: {fileID: 8060879779243405499, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-      propertyPath: spawnVoiceline
-      value: 
-      objectReference: {fileID: 8300000, guid: 24ef610a7324ca146b6faf7935e3cc2e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1771,11 +1751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barFill: {fileID: 2122002441}
---- !u!4 &1655035315 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6848233740116367126, guid: 36e08b6b90ffcd543b4be1c8a40cffd4, type: 3}
-  m_PrefabInstance: {fileID: 1091402251}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1710097749
 GameObject:
   m_ObjectHideFlags: 0

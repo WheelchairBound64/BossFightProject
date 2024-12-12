@@ -628,8 +628,8 @@ MonoBehaviour:
   - {fileID: 105754050576153564}
   - {fileID: 4977941679579550}
   damageEffectPrefab: {fileID: 6066822027452868663, guid: 23b574f9c07fefb48a1fe18fe736683a, type: 3}
-  hurtSounds: {fileID: 11400000, guid: 39a190ae1bb133c4d8718595c19e1c9f, type: 2}
-  deathSounds: {fileID: 11400000, guid: 39a190ae1bb133c4d8718595c19e1c9f, type: 2}
+  hurtSounds: {fileID: 11400000, guid: 57b334dc1098e8646a03787c5409d9df, type: 2}
+  deathSounds: {fileID: 11400000, guid: 3c8e00ea707ddf04d8815e3aec0d7bb5, type: 2}
   OnInitialize:
     m_PersistentCalls:
       m_Calls:
@@ -695,6 +695,9 @@ MonoBehaviour:
   shovelSwingSound: {fileID: 8300000, guid: 50f4b18b5dfab0a4ea53c838cd6fc1f7, type: 3}
   rocket: {fileID: 7913818765908776920, guid: a28d0f81368804b4196651577e2f0567, type: 3}
   rocketSpawn: {fileID: 6848233740116367126}
+  spawnVoiceline: {fileID: 8300000, guid: 24ef610a7324ca146b6faf7935e3cc2e, type: 3}
+  voiceLines: {fileID: 11400000, guid: 2ba25e9b4b37e9c409f8c05bec0f9025, type: 2}
+  rangedAttackDistance: 7.5
 --- !u!54 &6503739918161579068
 Rigidbody:
   m_ObjectHideFlags: 0

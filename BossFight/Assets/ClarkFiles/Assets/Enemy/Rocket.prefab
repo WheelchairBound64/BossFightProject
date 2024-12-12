@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketRB: {fileID: -5444609334751775513}
-  rocketSpeed: 12000
+  rocketSpeed: 11000
   rocketDespawnTime: 3
   rocketFire: {fileID: 8300000, guid: 5301fa1c3432a584fb7e832dd78b3c70, type: 3}
 --- !u!136 &1723542353505377365
